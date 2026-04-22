@@ -1,0 +1,15 @@
+body{
+    background:linear-gradient(90deg , rgba(26, 170, 186, 0.5),rgba(165, 191, 218, 0.5),rgba(113, 180, 204, 0.5))
+}
+
+.box{
+    height: 400px;
+    /* width: 100px; */
+    text-align: center;
+    border: 2px solid rgb(11, 161, 230) ;
+    align-items: center;
+    border-radius: 5%;
+   
+
+
+}

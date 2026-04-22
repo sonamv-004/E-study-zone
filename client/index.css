@@ -1,0 +1,30 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:linear-gradient(to right , rgba(26, 170, 186, 0.5),rgba(165, 191, 218, 0.5),rgba(113, 180, 204, 0.5))
+}
+input{
+    transition: 0.3s;
+    outline: none;
+}
+input:focus{
+    border-color: #4facfe;
+    box-shadow: 0 0 5px #4facfe ;
+}
+
+
+.box{
+    height: 500px;
+    /* width: 100px; */
+    text-align: center;
+    border: 2px solid rgb(11, 161, 230) ;
+    align-items: center;
+    border-radius: 5%;
+   font-family: italic;
+   text-decoration: none;
+   text-align: justify;
+
+
+}
+
+
+
