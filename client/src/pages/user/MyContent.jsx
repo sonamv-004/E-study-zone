@@ -6,7 +6,7 @@ const MyContent = () => {
    const[data,setData]= useState([])
    const userid=localStorage.getItem('id')
    const handleFetch=async(e)=>{
-    const res=await axios.get(`http://localhost:5000/api/content/getcontent/${userId}`)
+    const res=await axios.get(`https://e-study-zone-bder.onrender.com/api/content/getcontent/${userId}`)
     console.log(res)
     setData(res.data)
    }
@@ -31,7 +31,7 @@ const MyContent = () => {
             <td>{i+1}</td>
             <td>{item.skillId.skill}</td>
             <td>
-                <Link to={`http://localhost:5000/api/${item.file}`}>View</Link>
+                <Link to={`https://e-study-zone-bder.onrender.com/api/${item.file}`}>View</Link>
             </td>
         </tr>
     })
