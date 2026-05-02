@@ -16,13 +16,13 @@ const AddSkils = () => {
  }
  const handleSubmit = async(e)=>{
   e.preventDefault()
-  const res = await  axios.post('http://localhost:5000/api/skill/addskill',data)
+  const res = await  axios.post('https://e-study-zone-bder.onrender.com/api/skill/addskill',data)
   console.log(res);
   alert("Skill addedd successfully")
   
  }
 const handleFetch = async()=>{
-  const res = await axios.get(`http://localhost:5000/api/skill/skills/${userId}`)
+  const res = await axios.get(`https://e-study-zone-bder.onrender.com/api/skill/skills/${userId}`)
   console.log(res);
   
   setTotalData(res.data)
@@ -33,7 +33,7 @@ useEffect(()=>{
 },[])
 const handleDelete=async(id)=>{
   try{
-    await axios.delete(`http://localhost:5000/api/skills/{$id}`)
+    await axios.delete(`https://e-study-zone-bder.onrender.com/api/skills/{$id}`)
     handleFetch()
   }
   catch(error){
