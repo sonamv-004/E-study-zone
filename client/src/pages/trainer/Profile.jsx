@@ -7,7 +7,7 @@ function Profile() {
   const userId = localStorage.getItem('id')
   const [data,setData] = useState([]);
   const handleFetch = async()=>{
-    const res = await axios.get(`http://localhost:5000/api/user/getuser/${userId}`)
+    const res = await axios.get(`https://e-study-zone-bder.onrender.com/api/user/getuser/${userId}`)
     console.log(res);
     setData(res.data.data)
     
