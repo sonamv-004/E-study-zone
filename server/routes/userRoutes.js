@@ -3,6 +3,7 @@ const User=require('../models/User')
 const routes=express.Router()
 const jwt=require('jsonwebtoken')
 const sendEmail=require('../utils/Email')
+const verifyToken = require('../middleware/verifyToken')
 //for user registration
 routes.post('/register',async(req,res)=>{
     try{
@@ -171,7 +172,7 @@ routes.get('/getuser/:id',async(req,res)=>{
 })
 
 //get all user
-routes.get('/getuser',async(req,res)=>{
+routes.get('/getuser',verifyToken,async(req,res)=>{
     try{
         const data = await User.find({status:"active"}).lean()
         res.json({msg:"user fetched",data:data})

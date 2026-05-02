@@ -35,7 +35,7 @@ const App = () => {
             </Route>
             {/* trainer route */}
             <Route path='/trainerdashboard' element={<TrainerDashboard />}>
-            <Route index elemen  t={<DashboardHome/>}></Route>
+            <Route index element={<DashboardHome/>}></Route>
             <Route path='profile' element={<Profile/>} ></Route>
             <Route path='addskills' element={<AddSkils/>} ></Route>
             <Route path='content' element={<Content/>} ></Route>
