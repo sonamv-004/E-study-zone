@@ -12,13 +12,13 @@ const Handshake = () => {
     }
     const handleSubmit = async(e)=>{
         e.preventDefault();
-        const res = await axios.post('http://localhost:5000/api/content/search',form);
+        const res = await axios.post('https://e-study-zone-bder.onrender.com/api/content/search',form);
         console.log(res);
         setData(res.data.msg)
 
     }
     const sendRequest=async(e)=>{
-        const res=await axios.post(`http://localhost:5000/api/handshake/request/${e.userId._id}`)
+        const res=await axios.post(`https://e-study-zone-bder.onrender.com/api/handshake/request/${e.userId._id}`)
         console.log(res)
     }
     return (
