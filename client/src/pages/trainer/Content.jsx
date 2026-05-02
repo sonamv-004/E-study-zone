@@ -14,7 +14,7 @@ const Content = () => {
  });
  
  const handleFetch=async()=>{
-  const res=await axios.get(`http://localhost:5000/api/skill/getskill/${userId}`)
+  const res=await axios.get(`https://e-study-zone-bder.onrender.com/api/skill/getskill/${userId}`)
   console.log(res.data);
   setData(res.data.data)
  }
@@ -33,7 +33,7 @@ const Content = () => {
   }
   const handlesubmit=async(e)=>{
     e.preventDefault();
-    const res=await axios.post(`http://localhost:5000/api/content/upload`,form,{
+    const res=await axios.post(`https://e-study-zone-bder.onrender.com/api/content/upload`,form,{
       headers:{
         'Content-type':'multipart/form-data'
       }
